@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.registro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.icon img {
+    max-width: 200px;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="email"], input[type="text"], input[type="password"] {
+    width: 300px;
+    padding: 12px;
+    margin: 5px 0;
+    border: 2px solid #333;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    width: 300px;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.8;
+}

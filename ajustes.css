@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f5f5f5;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #e6e6e6;
+    padding: 20px;
+    height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.tabs {
+    margin: 20px 0;
+}
+
+.tabs button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tabs button:hover {
+    background-color: #d4d4d4;
+}
+
+.profile {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.edit-icon {
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin: 8px 0 4px;
+}
+
+form input {
+    width: calc(50% - 10px);
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}

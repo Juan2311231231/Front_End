@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes - Patitas en Colombia</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+        }
+
+        /* Estilos del menú lateral */
+        .menu-lateral {
+            width: 250px;
+            background-color: #ffffff;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        .menu-lateral ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-lateral li {
+            margin: 10px 0;
+        }
+
+        .menu-lateral a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-lateral a:hover {
+            background-color: #e9ecef;
+        }
+
+        .menu-lateral i {
+            margin-right: 10px;
+        }
+
+        /* Estilos de la sección principal */
+        .contenedor-principal {
+            flex: 1;
+            padding: 40px;
+            background-color: #ffffff;
+            margin-left: 250px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .campo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .etiqueta {
+            font-weight: bold;
+            color: #4a5568;
+        }
+
+        input, select {
+            padding: 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            width: 100%;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú lateral -->
+    <div class="menu-lateral">
+        <div class="logo">
+            <h2>Patitas en Colombia</h2>
+        </div>
+        <ul>
+            <li><a href="#"><i>🏠</i> Inicio</a></li>
+            <li><a href="#"><i>🐾</i> Adopciones</a></li>
+            <li><a href="#"><i>📅</i> Eventos</a></li>
+            <li><a href="#"><i>💰</i> Donaciones</a></li>
+            <li><a href="#"><i>📊</i> Reportes</a></li>
+            <li><a href="#"><i>👥</i> Usuarios</a></li>
+            <li><a href="#"><i>⚙️</i> Ajustes</a></li>
+            <li><a href="#"><i>🔒</i> Cerrar sesión</a></li>
+        </ul>
+    </div>
+
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes - Patitas en Colombia</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+        }
+
+        /* Estilos del menú lateral */
+        .menu-lateral {
+            width: 250px;
+            background-color: #ffffff;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        .menu-lateral ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-lateral li {
+            margin: 10px 0;
+        }
+
+        .menu-lateral a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-lateral a:hover {
+            background-color: #e9ecef;
+        }
+
+        .menu-lateral i {
+            margin-right: 10px;
+        }
+
+        /* Estilos de la sección principal */
+        .contenedor-principal {
+            flex: 1;
+            padding: 40px;
+            background-color: #ffffff;
+            margin-left: 250px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+
+        /* Botones de navegación de ajustes */
+        .botones-ajustes {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .boton-ajuste {
+            padding: 10px 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .boton-ajuste:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Estilos del formulario */
+        .campo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .etiqueta {
+            font-weight: bold;
+            color: #4a5568;
+        }
+
+        input, select {
+            padding: 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            width: 100%;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <h1>Ajustes</h1>
+
+        <!-- Botones de navegación de ajustes -->
+        <div class="botones-ajustes">
+            <button class="boton-ajuste">Personal Info</button>
+            <button class="boton-ajuste">Contraseña y Seguridad</button>
+            <button class="boton-ajuste">Notificación</button>
+            <button class="boton-ajuste">Elige un plan</button>
+        </div>
+
+        <!-- Formulario de ajustes -->
+        <form>
+            <div class="campo">
+                <span class="etiqueta">Nombre</span>
+                <input type="text" value="Nicola">
+                <span class="etiqueta">Apellido</span>
+                <input type="text" value="Rich">
+            </div>
+
+            <div class="campo">
+                <span class="etiqueta">Email</span>
+                <input type="email" value="email@gmail.com" style="grid-column: span 2;">
+            </div>
+
+            <div class="campo">
+                <span class="etiqueta">Teléfono</span>
+                <input type="tel" value="+000 111 222 333" style="grid-column: span 2;">
+            </div>
+
+            <div class="campo">
+                <span class="etiqueta">Dirección</span>
+                <input type="text" value="Sesame Street 000" style="grid-column: span 2;">
+            </div>
+
+            <div class="campo">
+                <span class="etiqueta">Código postal</span>
+                <input type="text" value="1234">
+                <span class="etiqueta">Ciudad</span>
+                <input type="text" value="NYC">
+            </div>
+
+            <div class="campo">
+                <span class="etiqueta">Estado</span>
+                <input type="text" value="New York">
+                <span class="etiqueta">País</span>
+                <select>
+                    <option>United States</option>
+                    <option>México</option>
+                    <option>Colombia</option>
+                </select>
+            </div>
+
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+
+</body>
+</html>

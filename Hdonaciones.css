@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background-color: #e6e6e6;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.settings {
+    position: absolute;
+    bottom: 30px;
+    
+}
+
+.content {
+    margin-left: 320px;
+    padding: 100px;
+}
+
+.payment-cards {
+    display: flex;
+    gap: 50px;
+    margin: 37px 0;
+}
+
+.card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.history {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 20px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.filter-icon {
+    float: right;
+    cursor: pointer;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.donation-section {
+    margin: 10px 0;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.pending {
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.donation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.amount {
+    font-weight: bold;
+    color: #333;
+}
+.history {
+    
+        float: left;
+        margin-right: 20px; /* Ajusta la distancia hacia la derecha */
+        margin-left: 1011px;
+        margin-top: -675px;  /* Ajusta el valor negativo para subir */
+    
+    
+}
