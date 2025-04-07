@@ -112,15 +112,15 @@
             <h2>Patitas en Colombia</h2>
         </div>
         <ul>
-            <li><a href="#"><i>🏠</i> Inicio</a></li>
-            <li><a href="#"><i>🐾</i> Adopciones</a></li>
-            <li><a href="#"><i>📅</i> Eventos</a></li>
-            <li><a href="#"><i>💰</i> Donaciones</a></li>
-            <li><a href="#"><i>📊</i> Reportes</a></li>
-            <li><a href="#"><i>👥</i> Usuarios</a></li>
-            <li><a href="#"><i>⚙️</i> Ajustes</a></li>
-            <li><a href="#"><i>🔒</i> Cerrar sesión</a></li>
-        </ul>
+            <li><a href="index.html"><i>🏠</i> Inicio</a></li>
+            <li><a href="adopciones.html"><i>🐾</i> Adopciones</a></li>
+            <li><a href="eventos.html"><i>📅</i> Eventos</a></li>
+            <li><a href="Donaciones.html"><i>💰</i> Donaciones</a></li>
+            <li><a href="reportes.html"><i>📊</i> Reportes</a></li>
+            <li><a href="usuarios.html"><i>👥</i> Usuarios</a></li>
+            <li><a href="ajustes.html"><i>⚙️</i> Ajustes</a></li>
+            <li><a href="#" onclick="cerrarSesion()"><i>🔒</i> Cerrar sesión</a></li>
+        </ul>        
     </div>
 
     <!DOCTYPE html>
@@ -312,6 +312,10 @@
             <button type="submit">Guardar Cambios</button>
         </form>
     </div>
-
+    <script>
+        function cerrarSesion() {
+            window.location.href = "index.html";
+        }
+    </script>    
 </body>
 </html>
