@@ -23,9 +23,9 @@
             
         </ul>
         <div class="settings">
-            <p>⚙️Ajustes</p>
-            <p>🚪Cerrar sesión</p>
-        </div>
+            <li><a href="ajustes.html"><i>⚙️</i> Ajustes</a></li>
+            <li onclick="cerrarSesion()" style="cursor: pointer;">🚪Cerrar sesión</li>
+        </div>        
     </div>
 
     <div class="content">
@@ -91,5 +91,10 @@
             </div>
         </div>
     </div>
+    <script>
+        function cerrarSesion() {
+            window.location.href = "index.html";
+        }
+    </script>    
 </body>
 </html>
