@@ -5,59 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Patitas en el Corazón</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos para los botones de Login y Registro */
+        .auth-buttons {
+            margin-left: 20px;
+        }
+
+        .auth-buttons a {
+            margin-left: 10px;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #3b82f6;
+            border-radius: 20px;
+            color: #3b82f6;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .auth-buttons a:hover {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        /* Organización del header para mostrar logo, menú, perfil y botones bien distribuidos */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .perfil {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .perfil img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+    </style>
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <div class="logo">
-            <img src="CSS/images/logo.jpg" alt="Patitas en el Corazón">
-        </div>
-        
-        <nav>
-            <ul>
-                <a href="index.html"class="btn"><li>🐾Inicio</li></a>
-            <a href="adopciones.html"class="btn"><li>🐕Adopciones</li></a>
-            <a href="eventos.html"class="btn"><li>🗓️Eventos</li></a>
-            <a href="Donaciones.html"class="btn"><li>💰Donaciones</li></a>
-            <a href="reportes.html"class="btn"><li>📄Reportes</li></a>
-            <a href="usuarios.html"class="btn"><li>👨‍👩‍👧‍👦Usuarios</li></a>
-            </ul>
-        </nav>
-        <div class="perfil">
-            <span>Nicola Rich</span>
-            <img src="CSS/images/perfil.png" alt="Perfil">
-        </div>
-    </header>
+<!-- Encabezado -->
+<header>
+    <div class="logo">
+        <img src="CSS/images/logo.jpg" alt="Patitas en el Corazón">
+    </div>
 
-    <!-- Sección Principal -->
-    <main>
-        <h3>NOTICIAS</h3>
-        <h1>Sobre Nosotros 🐱💙</h1>
-        <p>En Huellitas del Corazón, nos dedicamos al rescate y cuidado de perros y gatos en situación de abandono. Organizamos jornadas de bienestar animal, brindamos atención veterinaria, promovemos la adopción responsable mediante evaluaciones cuidadosas y funcionamos gracias al apoyo de personas solidarias que, con sus donaciones, nos ayudan a seguir salvando vidas. ¡Juntos podemos hacer la diferencia! 💞</p>
-        <p class="autor">TOM JERRY</p>
-        <p class="fecha">30 Marzo 2025</p>
+    <nav>
+        <ul>
+            <a href="index.html" class="btn"><li>🐾Inicio</li></a>
+            <a href="adopciones.html" class="btn"><li>🐕Adopciones</li></a>
+            <a href="eventos.html" class="btn"><li>🗓️Eventos</li></a>
+            <a href="Donaciones.html" class="btn"><li>💰Donaciones</li></a>
+            <a href="reportes.html" class="btn"><li>📄Reportes</li></a>
+            <a href="usuarios.html" class="btn"><li>👨‍👩‍👧‍👦Usuarios</li></a>
+        </ul>
+    </nav>
 
-        <!-- Redes Sociales -->
-        <div class="social-icons">
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-instagram"></i>
+    <!-- Botones de Login/Registro + Perfil -->
+    <div class="header-right">
+        <div class="auth-buttons">
+            <a href="login.html">Iniciar Sesión</a>
+            <a href="registro.html">Registrarse</a>
         </div>
-    </main>
-      
-    <!-- Pie de Página -->
-    <footer>
-        <div class="footer-content">
-            <img src="CSS/images/logo.jpg" alt="Patitas en el Corazón">
-            <div class="footer-links">
-                <a href="#">Acerca</a>
-                <a href="#">Autores</a>
-                <a href="#">Archivo</a>
-                <a href="#">Términos y condiciones</a>
-                <a href="#">Política de cookies</a>
-            </div>
-        </div>
-    </footer>
+
+    </div>
+</header>
+
+<!-- Sección Principal -->
+<main class="px-6 py-10 bg-white max-w-6xl mx-auto">
+    <h3 class="text-lg text-gray-600 mb-2">📰 NOTICIAS RECIENTES</h3>
+    <h1 class="text-3xl font-bold text-amber-800 mb-8">Sobre Nosotros 🐱💙</h1>
+
+    <!-- Menú horizontal -->
+    <nav class="flex flex-wrap gap-4 mb-8 justify-center">
+        <a href="#historias" class="bg-yellow-100 hover:bg-yellow-200 text-amber-800 font-semibold py-2 px-6 rounded-full shadow transition">📖 Historias de Rescate</a>
+        <a href="#esterilizacion" class="bg-yellow-100 hover:bg-yellow-200 text-amber-800 font-semibold py-2 px-6 rounded-full shadow transition">✂️ Esterilización y Bienestar</a>
+        <a href="#contacto" class="bg-yellow-100 hover:bg-yellow-200 text-amber-800 font-semibold py-2 px-6 rounded-full shadow transition">📞 Contáctenos</a>
+    </nav>
+
+    <!-- Contenido -->
+    <section id="historias" class="bg-yellow-50 p-8 rounded-xl shadow-md mb-10">
+        <h2 class="text-2xl font-bold text-amber-800 mb-4">📖 Historias de Rescate</h2>
+        <p class="text-gray-700 mb-4">
+            En "Patitas en el Corazón", cada rescate representa una oportunidad de cambio. Hemos rescatado más de 200 animales que vivían en condiciones de abandono, maltrato o enfermedad. Cada historia es única, y cada final feliz es un testimonio del poder del amor y la solidaridad.
+        </p>
+        <p class="text-gray-700">
+            Por ejemplo, rescatamos a "Luna", una perrita de raza criolla encontrada desnutrida y herida. Tras varios meses de recuperación, fue adoptada por una familia amorosa. Hoy corre feliz en su jardín, con una nueva oportunidad de vida. 💖
+        </p>
+    </section>
+
+    <section id="esterilizacion" class="bg-yellow-50 p-8 rounded-xl shadow-md mb-10">
+        <h2 class="text-2xl font-bold text-amber-800 mb-4">✂️ Esterilización y Bienestar</h2>
+        <p class="text-gray-700 mb-4">
+            Luchamos contra la sobrepoblación animal mediante campañas de esterilización responsables. Cada mes, en alianza con clínicas veterinarias locales, organizamos jornadas gratuitas y subsidiadas en sectores vulnerables. Hasta ahora, hemos realizado más de 800 procedimientos.
+        </p>
+        <p class="text-gray-700 mb-4">
+            También brindamos servicios integrales de bienestar como vacunación, desparasitación, orientación en adopción responsable y talleres de tenencia ética. Creemos que un animal sano es un animal feliz, y que educar es prevenir.
+        </p>
+        <p class="text-gray-700">
+            ¡Gracias a nuestros voluntarios y donantes, podemos seguir cuidando de quienes no tienen voz! 🐾
+        </p>
+    </section>
+
+    <section id="contacto" class="bg-yellow-50 p-8 rounded-xl shadow-md">
+        <h2 class="text-2xl font-bold text-amber-800 mb-4">📞 Contáctenos</h2>
+        <p class="text-gray-700 mb-4">
+            ¿Tienes dudas, quieres adoptar, donar o simplemente compartir tu amor por los animales? Estamos para escucharte. Puedes escribirnos, llamarnos o encontrarnos en nuestras redes sociales. ¡Tu ayuda puede cambiar una vida! 🐶
+        </p>
+        <ul class="text-gray-700 space-y-2">
+            <li>📧 <strong>Email:</strong> contacto@patitascorazon.org</li>
+            <li>📱 <strong>WhatsApp:</strong> +57 320 123 4567</li>
+            <li>📍 <strong>Dirección:</strong> Calle 123 #45-67, Pamplona, Norte de Santander</li>
+            <li>🌐 <strong>Sitio web:</strong> www.patitascorazon.org</li>
+        </ul>
+        <p class="mt-4 text-gray-700">
+            También puedes seguirnos en nuestras redes sociales para ver historias, jornadas y peluditos en adopción 🐕💬.
+        </p>
+    </section>
+
+    <p class="text-sm text-gray-500 mt-10 text-center">Fundación Patitas en el Corazón • 8 de abril de 2025</p>
+</main>
+
+
+<!-- Pie de Página -->
+<footer>
+    <p>Patitas en el Corazón</p>
+    <div class="footer-links">
+        <a href="#">Acerca</a>
+        <a href="#">Autores</a>
+        <a href="#">Archivo</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de cookies</a>
+    </div>
+    <div class="social-icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+</footer>
+
 </body>
 </html>

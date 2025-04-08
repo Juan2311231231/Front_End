@@ -3,183 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <title>Reportes - Patitas en el Corazón</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/adopciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #555;
-            overflow: hidden;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            padding: 14px 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-        }
-
-        nav ul li a:hover {
-            background-color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            margin: 10px auto;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .card img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .card-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .comments {
-            margin: 20px auto;
-            padding: 15px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .comments p {
-            margin: 8px 0;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        .user-icon {
-            margin-right: 5px;
-        }
+        .sidebar a:hover { background-color: #f3eeed; }
+        .sidebar a.active { background-color: #3B82F6; }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
-<body>
+<body class="flex h-screen bg-gray-100">
+<!-- Menú lateral -->
+<aside class="sidebar w-64 bg-[#fdf6ec] text-gray-800 fixed h-full overflow-y-auto">
+    <nav class="p-4">
+        <ul class="space-y-2">
+            <li><a href="index.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐾</span> Inicio</a></li>
+            <li><a href="adopciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐕</span> Adopciones</a></li>
+            <li><a href="eventos.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🗓️</span> Eventos</a></li>
+            <li><a href="Donaciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">💰</span> Donaciones</a></li>
+            <li><a href="reportes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">📄</span> Reportes</a></li>
+            <li><a href="usuarios.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">👨‍👩‍👧‍👦</span> Usuarios</a></li>
+
+            <!-- Espacio para ajustes y cerrar sesión (alineado al final) -->
+            <div class="absolute bottom-0 w-full left-0 p-4">
+                <li><a href="ajustes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">⚙️</span> Ajustes</a></li>
+                <li onclick="cerrarSesion()" class="btn block p-3 rounded-lg flex items-center cursor-pointer hover:bg-gray-700"><span class="mr-2">🚪</span> Cerrar sesión</li>
+            </div>
+        </ul>
+    </nav>
+</aside>
+
+
+<!-- Contenido principal -->
+<main class="flex-1 flex flex-col ml-64 min-h-screen">
+
+    <!-- Encabezado -->
     <header>
-        <h1>PATITAS EN EL CORAZÓN - Reportes</h1>
+        <div class="logo">
+            <img src="CSS/images/logo.jpg" alt=Adopciones">
+        </div>
+        <h2>Reportes 🐾</h2>
+        <div class="perfil">
+            <span>Nicola Rich</span>
+            <img src="CSS/images/perfil.png" alt="Perfil">
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="btn">🐾Inicio</a></li>
-            <li><a href="adopciones.html" class="btn">🐕Adopciones</a></li>
-            <li><a href="eventos.html" class="btn">🗓️Eventos</a></li>
-            <li><a href="Donaciones.html" class="btn">💰Donaciones</a></li>
-            <li><a href="reportes.html" class="btn">📄Reportes</a></li>
-            <li><a href="usuarios.html" class="btn">👨‍👩‍👧‍👦Usuarios</a></li>
-        </ul>
-    </nav>    
+    <!-- Contenido -->
+    <section class="flex-1 p-8 space-y-8">
+        <div>
+            <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Cuidadores de la semana</h2>
+            <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                    <img src="andres.png" alt="Andrés" class="w-16 h-16 rounded-full">
+                    <p class="text-lg font-medium text-gray-700">Andrés</p>
+                </div>
+                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                    <img src="laura.png" alt="Laura" class="w-16 h-16 rounded-full">
+                    <p class="text-lg font-medium text-gray-700">Laura</p>
+                </div>
+                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                    <h2>Estadísticas del Mes</h2>
+                    <div class="card">
+                        <canvas id="adopcionesPorMes" width="400" height="200"></canvas>
+                    </div>
 
-    <div class="container">
-        <h2>Cuidadores de la semana</h2>
-        <div class="card">
-            <img src="andres.png" alt="Andrés">
-            <div class="card-content">
-                <p>Andrés</p>
+                    <div class="card">
+                        <canvas id="tiposMascotas" width="400" height="200"></canvas>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="laura.png" alt="Laura">
-            <div class="card-content">
-                <p>Laura</p>
-            </div>
-        </div>
 
-        <h2>Mascotas Adoptadas de la semana</h2>
-        <div class="card">
-            <img src="lolo.png" alt="Lolo">
-            <div class="card-content">
-                <p>Lolo</p>
-            </div>
         </div>
-        <div class="card">
-            <img src="star.png" alt="Star">
-            <div class="card-content">
-                <p>Star</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="kuma.png" alt="Kuma">
-            <div class="card-content">
-                <p>Kuma</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="rocky.png" alt="Rocky">
-            <div class="card-content">
-                <p>Rocky</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="santy.png" alt="Santy">
-            <div class="card-content">
-                <p>Santy</p>
+        <div>
+            <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Mascotas Adoptadas de la semana</h2>
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                    <img src="lolo.png" alt="Lolo" class="w-16 h-16 rounded-full">
+                    <p class="text-lg font-medium text-gray-700">Lolo</p>
+                </div>
+                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                    <img src="star.png" alt="Star" class="w-16 h-16 rounded-full">
+                    <p class="text-lg font-medium text-gray-700">Star</p>
+                </div>
+                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                    <img src="kuma.png" alt="Kuma" class="w-16 h-16 rounded-full">
+                    <p class="text-lg font-medium text-gray-700">Kuma</p>
+                </div>
+                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                    <img src="rocky.png" alt="Rocky" class="w-16 h-16 rounded-full">
+                    <p class="text-lg font-medium text-gray-700">Rocky</p>
+                </div>
+                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                    <img src="santy.png" alt="Santy" class="w-16 h-16 rounded-full">
+                    <p class="text-lg font-medium text-gray-700">Santy</p>
+                </div>
             </div>
         </div>
 
-        <h2>Comentarios de Clientes</h2>
-        <div class="comments">
-            <p><span class="user-icon">👤</span>Me encanta esta página, tiene muchas opciones para adoptar y las historias son hermosas.</p>
-            <p><span class="user-icon">👤</span>Es increíble ver tantos animalitos en busca de un hogar, la información es clara.</p>
+        <div>
+            <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Comentarios de Clientes</h2>
+            <div class="bg-white max-w-3xl mx-auto rounded-lg shadow p-6 space-y-4">
+                <p><span class="text-gray-500 mr-2">👤</span>Me encanta esta página, tiene muchas opciones para adoptar y las historias son hermosas.</p>
+                <p><span class="text-gray-500 mr-2">👤</span>Es increíble ver tantos animalitos en busca de un hogar, la información es clara.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
+
+    <!-- Pie de Página -->
     <footer>
-        <p>&copy; 2024 Patitas en el Corazón. Todos los derechos reservados.</p>
+        <p>Patitas en el Corazón</p>
+        <div class="footer-links">
+            <a href="#">Acerca</a>
+            <a href="#">Autores</a>
+            <a href="#">Archivo</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de cookies</a>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
     </footer>
+</main>
+
+<script>
+    // Adopciones por mes (simulado)
+    const ctx1 = document.getElementById('adopcionesPorMes').getContext('2d');
+    const chart1 = new Chart(ctx1, {
+        type: 'line',
+        data: {
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+            datasets: [{
+                label: 'Adopciones por mes',
+                data: [12, 19, 15, 22, 17, 25],
+                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                tension: 0.4,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: true }
+            }
+        }
+    });
+
+    // Tipos de mascotas adoptadas
+    const ctx2 = document.getElementById('tiposMascotas').getContext('2d');
+    const chart2 = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Perros', 'Gatos', 'Otros'],
+            datasets: [{
+                label: 'Tipos de Mascotas Adoptadas',
+                data: [60, 30, 10],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(255, 206, 86, 0.7)',
+                    'rgba(75, 192, 192, 0.7)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+</script>
+
 </body>
 </html>

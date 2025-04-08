@@ -6,101 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario de Eventos</title>
     <link rel="stylesheet" href="CSS/eventos.css">
-
+    <link rel="stylesheet" href="css/adopciones.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sidebar a:hover { background-color: #f3eeed; }
+        .sidebar a.active { background-color: #3B82F6; }
+    </style>
 </head>
-<body>
-    <!-- Menú lateral -->
-    <div class="menu-lateral">
-        <div class="logo">
-             <img src="CSS/images/logo.jpg" alt="Patitas en el Corazón">
-        </div>
-        <ul>
-            <a href="index.html"class="btn"><li>🐾Inicio</li></a>
-        <a href="adopciones.html"class="btn"><li>🐕Adopciones</li></a>
-        <a href="eventos.html"class="btn"><li>🗓️Eventos</li></a>
-        <a href="Donaciones.html"class="btn"><li>💰Donaciones</li></a>
-        <a href="reportes.html"class="btn"><li>📄Reportes</li></a>
-        <a href="usuarios.html"class="btn"><li>👨‍👩‍👧‍👦Usuarios</li></a>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <li><a href="ajustes.html"><i>⚙️</i> Ajustes</a></li>
-        <li onclick="cerrarSesion()" style="cursor: pointer;">🚪Cerrar sesión</li>
-        </ul>
-    </div>
+<body class="flex h-screen bg-gray-100">
+<!-- Menú lateral -->
+<aside class="sidebar w-64 bg-[#fdf6ec] text-gray-800 fixed h-full overflow-y-auto">
+    <nav class="p-4">
+        <ul class="space-y-2">
+            <li><a href="index.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐾</span> Inicio</a></li>
+            <li><a href="adopciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐕</span> Adopciones</a></li>
+            <li><a href="eventos.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🗓️</span> Eventos</a></li>
+            <li><a href="Donaciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">💰</span> Donaciones</a></li>
+            <li><a href="reportes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">📄</span> Reportes</a></li>
+            <li><a href="usuarios.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">👨‍👩‍👧‍👦</span> Usuarios</a></li>
 
-    <!-- Contenedor principal -->
-    <div class="calendar-container">
-        <div class="header">
-            <h1>Calendario</h1>
-            <div class="important">
-                <i class="icon">🔔</i> Importante del mes
+            <!-- Espacio para ajustes y cerrar sesión (alineado al final) -->
+            <div class="absolute bottom-0 w-full left-0 p-4">
+                <li><a href="ajustes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">⚙️</span> Ajustes</a></li>
+                <li onclick="cerrarSesion()" class="btn block p-3 rounded-lg flex items-center cursor-pointer hover:bg-gray-700"><span class="mr-2">🚪</span> Cerrar sesión</li>
             </div>
-            <button class="month-btn" onclick="toggleCalendar()">Mes</button>
-            <div class="calendar-popup" id="calendar-popup">
-                <input type="date" id="date-picker" onchange="showSelectedDate()">
-                <p id="selected-date"></p>
+        </ul>
+    </nav>
+</aside>
+
+<!-- Contenido principal -->
+<!-- Contenido principal -->
+<!-- Contenido principal -->
+<main class="flex-1 ml-64 px-8 py-10 overflow-y-auto bg-gray-100" id="content">
+    <!-- Encabezado -->
+    <header class="flex items-center justify-between mb-8">
+        <div class="flex items-center gap-4">
+            <img src="CSS/images/logo.jpg" alt="Eventos" class="w-16 h-16 rounded-full border">
+            <h2 class="text-3xl font-bold text-gray-700">Planeador de Eventos 🐾</h2>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="text-lg text-gray-700">Nicola Rich</span>
+            <img src="CSS/images/perfil.png" alt="Perfil" class="w-10 h-10 rounded-full">
+        </div>
+    </header>
+
+    <!-- Botón para mostrar/ocultar calendario -->
+    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow mb-6 transition" onclick="toggleCalendar()">
+        Mostrar / Ocultar Calendario
+    </button>
+
+    <!-- Contenedor del calendario -->
+    <div id="calendar-container" class="calendar-container hidden bg-white p-6 mt-10 rounded-lg shadow-md space-y-6">
+
+    <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-semibold text-gray-700">Calendario de Eventos</h1>
+            <div class="flex gap-4 items-center">
+                <span class="text-yellow-600 font-medium">🔔 Importante del mes</span>
+                <input type="date" id="date-picker" onchange="showSelectedDate()" class="border rounded px-2 py-1 text-sm">
             </div>
         </div>
+        <p id="selected-date" class="text-gray-600 text-sm"></p>
 
         <!-- Eventos -->
-        <div class="event">
-            <div class="icon">📍</div>
-            <div class="details">
-                <h2>Evento 1</h2>
-                <p>Día: 15 de octubre</p>
-                <p>Hora: 10:00 AM</p>
-                <textarea placeholder="Escribe aquí el detalle del evento..." class="evento-texto"></textarea>
-
+        <div class="space-y-4">
+            <div class="event p-4 border-l-4 border-blue-500 bg-blue-50 rounded">
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">📍</span>
+                    <div>
+                        <h2 class="font-bold text-blue-700">Evento 1</h2>
+                        <p>Día: 15 de octubre</p>
+                        <p>Hora: 10:00 AM</p>
+                        <textarea placeholder="Escribe aquí el detalle del evento..." class="w-full border p-2 mt-2 rounded text-sm"></textarea>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="event">
-            <div class="icon">💡</div>
-            <div class="details">
-                <h2>Evento 2</h2>
-                <p>Día: 20 de octubre</p>
-                <p>Hora: 2:00 PM</p>
-                <textarea placeholder="Escribe aquí el detalle del evento..." class="evento-texto"></textarea>
-
+            <div class="event p-4 border-l-4 border-green-500 bg-green-50 rounded">
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">💡</span>
+                    <div>
+                        <h2 class="font-bold text-green-700">Evento 2</h2>
+                        <p>Día: 20 de octubre</p>
+                        <p>Hora: 2:00 PM</p>
+                        <textarea placeholder="Escribe aquí el detalle del evento..." class="w-full border p-2 mt-2 rounded text-sm"></textarea>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="event">
-            <div class="icon">💬</div>
-            <div class="details">
-                <h2>Evento 3</h2>
-                <p>Día: 25 de octubre</p>
-                <p>Hora: 6:00 PM</p>
-                <textarea placeholder="Escribe aquí el detalle del evento..." class="evento-texto"></textarea>
-
+            <div class="event p-4 border-l-4 border-purple-500 bg-purple-50 rounded">
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">💬</span>
+                    <div>
+                        <h2 class="font-bold text-purple-700">Evento 3</h2>
+                        <p>Día: 25 de octubre</p>
+                        <p>Hora: 6:00 PM</p>
+                        <textarea placeholder="Escribe aquí el detalle del evento..." class="w-full border p-2 mt-2 rounded text-sm"></textarea>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="event">
-            <div class="icon">🏢</div>
-            <div class="details">
-                <h2>Evento 4</h2>
-                <p>Día: 30 de octubre</p>
-                <p>Hora: 9:00 AM</p>
-                <textarea placeholder="Escribe aquí el detalle del evento..." class="evento-texto"></textarea>
-
+            <div class="event p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded">
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">🏢</span>
+                    <div>
+                        <h2 class="font-bold text-yellow-700">Evento 4</h2>
+                        <p>Día: 30 de octubre</p>
+                        <p>Hora: 9:00 AM</p>
+                        <textarea placeholder="Escribe aquí el detalle del evento..." class="w-full border p-2 mt-2 rounded text-sm"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        function toggleCalendar() {
-            const calendarPopup = document.getElementById("calendar-popup");
-            calendarPopup.style.display = calendarPopup.style.display === "block" ? "none" : "block";
-        }
 
-        function showSelectedDate() {
-            const datePicker = document.getElementById("date-picker");
-            const selectedDate = datePicker.value;
-            const dateDisplay = document.getElementById("selected-date");
-            dateDisplay.textContent = `Fecha seleccionada: ${selectedDate}`;
-        }
-    </script>
+</main>
+
+
+    <!-- JavaScript -->
+<script>
+    function toggleCalendar() {
+        const calendar = document.getElementById("calendar-container");
+        calendar.classList.toggle("hidden");
+    }
+
+    function showSelectedDate() {
+        const date = document.getElementById("date-picker").value;
+        const text = document.getElementById("selected-date");
+        text.textContent = `Fecha seleccionada: ${date}`;
+    }
+
+    function cerrarSesion() {
+        window.location.href = "index.html";
+    }
+</script>
+
 
 <script>
     function cerrarSesion() {

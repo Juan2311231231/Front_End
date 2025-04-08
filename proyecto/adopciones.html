@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adopciones - Patitas en el Corazón</title>
     <link rel="stylesheet" href="css/adopciones.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sidebar a:hover { background-color: #f3eeed; }
+        .sidebar a.active { background-color: #3B82F6; }
+    </style>
 </head>
-<body>
+<body class="flex h-screen bg-gray-100">
+<!-- Menú lateral -->
+<aside class="sidebar w-64 bg-[#fdf6ec] text-gray-800 fixed h-full overflow-y-auto">
+    <nav class="p-4">
+        <ul class="space-y-2">
+            <li><a href="index.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐾</span> Inicio</a></li>
+            <li><a href="adopciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐕</span> Adopciones</a></li>
+            <li><a href="eventos.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🗓️</span> Eventos</a></li>
+            <li><a href="Donaciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">💰</span> Donaciones</a></li>
+            <li><a href="reportes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">📄</span> Reportes</a></li>
+            <li><a href="usuarios.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">👨‍👩‍👧‍👦</span> Usuarios</a></li>
+
+            <!-- Espacio para ajustes y cerrar sesión (alineado al final) -->
+            <div class="absolute bottom-0 w-full left-0 p-4">
+                <li><a href="ajustes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">⚙️</span> Ajustes</a></li>
+                <li onclick="cerrarSesion()" class="btn block p-3 rounded-lg flex items-center cursor-pointer hover:bg-gray-700"><span class="mr-2">🚪</span> Cerrar sesión</li>
+            </div>
+        </ul>
+    </nav>
+</aside>
+
+<!-- Contenido principal -->
+<main class="flex-1 ml-64 p-8 overflow-y-auto" id="content">
     <!-- Encabezado -->
     <header>
         <div class="logo">
-            <img src="CSS/images/logo.jpg" alt="Patitas en el Corazón">
+            <img src="CSS/images/logo.jpg" alt="Adopciones">
         </div>
-        <h2>Elige a tu peludo 🐾</h2>
+        <h2>Adopciones🐾</h2>
         <div class="perfil">
             <span>Nicola Rich</span>
             <img src="CSS/images/perfil.png" alt="Perfil">
         </div>
     </header>
 
-    <!-- Menú Lateral -->
-    <aside>
-        <ul>
-            <a href="index.html"class="btn"><li>🐾Inicio</li></a>
-            <a href="adopciones.html"class="btn"><li>🐕Adopciones</li></a>
-            <a href="eventos.html"class="btn"><li>🗓️Eventos</li></a>
-            <a href="Donaciones.html"class="btn"><li>💰Donaciones</li></a>
-            <a href="reportes.html"class="btn"><li>📄Reportes</li></a>
-            <a href="usuarios.html"class="btn"><li>👨‍👩‍👧‍👦Usuarios</li></a>
-            
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <li><a href="ajustes.html"><i>⚙️</i> Ajustes</a></li>
-            <li onclick="cerrarSesion()" style="cursor: pointer;">🚪Cerrar sesión</li>
-        </ul>
-    </aside>
 
     <!-- Sección Principal -->
-    <main>
         <div style="display: flex; justify-content: center;">
             <h1>🐶Perros y  <a href="AdopcionesC.html"class="btn"><li>Gatos</li></a></h1>>
         </div>
@@ -71,8 +83,7 @@
                 <p>Peter es un perro grande y fuerte, de pelaje negro y marrón. Tiene orejas erguidas y una mirada atenta que demuestra su inteligencia. Siempre está alerta para proteger a su familia, pero en el fondo es un perro cariñoso que disfruta de los juegos y las caricias. Le encanta correr en espacios abiertos y es muy leal con quienes confían en él.</p>
             </div>
         </div>
-        
-    </main>
+
 
     <!-- Pie de Página -->
     <footer>
@@ -90,6 +101,7 @@
             <i class="fab fa-instagram"></i>
         </div>
     </footer>
+</main>
 
     <script>
         function cerrarSesion() {

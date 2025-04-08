@@ -106,22 +106,6 @@
 </head>
 <body>
 
-    <!-- Menú lateral -->
-    <div class="menu-lateral">
-        <div class="logo">
-            <h2>Patitas en Colombia</h2>
-        </div>
-        <ul>
-            <li><a href="index.html"><i>🏠</i> Inicio</a></li>
-            <li><a href="adopciones.html"><i>🐾</i> Adopciones</a></li>
-            <li><a href="eventos.html"><i>📅</i> Eventos</a></li>
-            <li><a href="Donaciones.html"><i>💰</i> Donaciones</a></li>
-            <li><a href="reportes.html"><i>📊</i> Reportes</a></li>
-            <li><a href="usuarios.html"><i>👥</i> Usuarios</a></li>
-            <li><a href="ajustes.html"><i>⚙️</i> Ajustes</a></li>
-            <li><a href="#" onclick="cerrarSesion()"><i>🔒</i> Cerrar sesión</a></li>
-        </ul>        
-    </div>
 
     <!DOCTYPE html>
 <html lang="es">
@@ -315,6 +299,19 @@
     <script>
         function cerrarSesion() {
             window.location.href = "index.html";
+        }
+
+        // Carga el menú en todas las páginas
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('sidebar').innerHTML = html;
+                adjustMainContent(); // Ajusta el margen del contenido
+            });
+
+        function adjustMainContent() {
+            const sidebarWidth = document.querySelector('.sidebar').offsetWidth;
+            document.querySelector('.main-content').style.marginLeft = `${sidebarWidth}px`;
         }
     </script>    
 </body>
