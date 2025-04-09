@@ -36,7 +36,7 @@
 
 
 <!-- Contenido principal -->
-<main class="flex-1 flex flex-col ml-64 min-h-screen">
+<main class="flex-1 flex flex-col ml-64 min-h-screen" id="content">
 
     <!-- Encabezado -->
     <header>
@@ -52,51 +52,53 @@
 
     <!-- Contenido -->
     <section class="flex-1 p-8 space-y-8">
-        <div>
-            <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Cuidadores de la semana</h2>
-            <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
-                    <img src="andres.png" alt="Andrés" class="w-16 h-16 rounded-full">
-                    <p class="text-lg font-medium text-gray-700">Andrés</p>
-                </div>
-                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
-                    <img src="laura.png" alt="Laura" class="w-16 h-16 rounded-full">
-                    <p class="text-lg font-medium text-gray-700">Laura</p>
-                </div>
-                <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
-                    <h2>Estadísticas del Mes</h2>
-                    <div class="card">
-                        <canvas id="adopcionesPorMes" width="400" height="200"></canvas>
-                    </div>
+        <!-- Cuidadores -->
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Cuidadores de la semana</h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                <img src="CSS/images/pexels-simon-robben-55958-614810.jpg" alt="Andrés" class="w-16 h-16 rounded-full">
+                <p class="text-lg font-medium text-gray-700">Andrés</p>
+            </div>
+            <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
+                <img src="CSS/images/pexels-olly-774909.jpg" alt="Laura" class="w-16 h-16 rounded-full">
+                <p class="text-lg font-medium text-gray-700">Laura</p>
+            </div>
+        </div>
 
-                    <div class="card">
-                        <canvas id="tiposMascotas" width="400" height="200"></canvas>
-                    </div>
-                </div>
+        <!-- Gráficos -->
+        <div class="mt-12 max-w-4xl mx-auto space-y-8">
+            <h2 class="text-2xl font-semibold text-center text-gray-800">Estadísticas del Mes</h2>
+
+            <div class="bg-white rounded-lg shadow p-6">
+                <canvas id="adopcionesPorMes" class="w-full"></canvas>
             </div>
 
+            <div class="bg-white rounded-lg shadow p-6">
+                <canvas id="tiposMascotas" class="w-full"></canvas>
+            </div>
         </div>
+
         <div>
             <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Mascotas Adoptadas de la semana</h2>
             <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
-                    <img src="lolo.png" alt="Lolo" class="w-16 h-16 rounded-full">
+                    <img src="CSS/images/pexels-pixabay-220938.jpg" alt="Lolo" class="w-16 h-16 rounded-full">
                     <p class="text-lg font-medium text-gray-700">Lolo</p>
                 </div>
                 <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
-                    <img src="star.png" alt="Star" class="w-16 h-16 rounded-full">
+                    <img src="CSS/images/star.jpg" alt="Star" class="w-16 h-16 rounded-full">
                     <p class="text-lg font-medium text-gray-700">Star</p>
                 </div>
                 <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
-                    <img src="kuma.png" alt="Kuma" class="w-16 h-16 rounded-full">
+                    <img src="CSS/images/pexels-irina-zhur-5306735-9862786.jpg" alt="Kuma" class="w-16 h-16 rounded-full">
                     <p class="text-lg font-medium text-gray-700">Kuma</p>
                 </div>
                 <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
-                    <img src="rocky.png" alt="Rocky" class="w-16 h-16 rounded-full">
+                    <img src="CSS/images/rocky.jpg" alt="Rocky" class="w-16 h-16 rounded-full">
                     <p class="text-lg font-medium text-gray-700">Rocky</p>
                 </div>
                 <div class="card bg-white rounded-lg shadow p-4 flex items-center gap-4">
-                    <img src="santy.png" alt="Santy" class="w-16 h-16 rounded-full">
+                    <img src="CSS/images/santy.jpg" alt="Santy" class="w-16 h-16 rounded-full">
                     <p class="text-lg font-medium text-gray-700">Santy</p>
                 </div>
             </div>

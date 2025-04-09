@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Ajustes - Patitas en Colombia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
+        * {
+            box-sizing: border-box;
         }
 
-        /* Estilos del menú lateral */
-        .menu-lateral {
-            width: 250px;
-            background-color: #ffffff;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
             height: 100vh;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #fdf6ec;
+            color: #333;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
             padding: 20px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #f3eeed;
+        }
+
+        .sidebar .bottom-options {
+            position: absolute;
+            bottom: 20px;
+            width: 90%;
+        }
+
+        main {
+            margin-left: 250px;
+            padding: 40px;
+            flex: 1;
+            overflow-y: auto;
+            background-color: #fff;
         }
 
         .logo {
@@ -32,180 +74,34 @@
             max-width: 150px;
         }
 
-        .menu-lateral ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .menu-lateral li {
-            margin: 10px 0;
-        }
-
-        .menu-lateral a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-
-        .menu-lateral a:hover {
-            background-color: #e9ecef;
-        }
-
-        .menu-lateral i {
-            margin-right: 10px;
-        }
-
-        /* Estilos de la sección principal */
-        .contenedor-principal {
-            flex: 1;
-            padding: 40px;
-            background-color: #ffffff;
-            margin-left: 250px;
-        }
-
-        h1 {
+        h2 {
             color: #2c3e50;
             margin-bottom: 20px;
         }
 
-        .campo {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-            align-items: center;
-        }
-
-        .etiqueta {
-            font-weight: bold;
-            color: #4a5568;
-        }
-
-        input, select {
-            padding: 8px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            background-color: #f8f9fa;
-            width: 100%;
-        }
-
-        button {
-            background-color: #e74c3c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajustes - Patitas en Colombia</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-        }
-
-        /* Estilos del menú lateral */
-        .menu-lateral {
-            width: 250px;
-            background-color: #ffffff;
-            height: 100vh;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo img {
-            max-width: 150px;
-        }
-
-        .menu-lateral ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .menu-lateral li {
-            margin: 10px 0;
-        }
-
-        .menu-lateral a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-
-        .menu-lateral a:hover {
-            background-color: #e9ecef;
-        }
-
-        .menu-lateral i {
-            margin-right: 10px;
-        }
-
-        /* Estilos de la sección principal */
-        .contenedor-principal {
-            flex: 1;
-            padding: 40px;
-            background-color: #ffffff;
-            margin-left: 250px;
-        }
-
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e74c3c;
-            padding-bottom: 5px;
-        }
-
-        /* Botones de navegación de ajustes */
         .botones-ajustes {
             display: flex;
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
         .boton-ajuste {
             padding: 10px 20px;
-            border: 1px solid #dcdcdc;
-            border-radius: 8px;
-            background-color: #f8f9fa;
-            color: #333;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .boton-ajuste:hover {
             background-color: #e9ecef;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
         }
 
-        /* Estilos del formulario */
+        form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: auto;
+        }
+
         .campo {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -221,129 +117,142 @@
 
         input, select {
             padding: 8px;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #ccc;
             border-radius: 4px;
-            background-color: #f8f9fa;
+            background-color: #fff;
             width: 100%;
         }
 
-        button {
+        button[type="submit"] {
             background-color: #e74c3c;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            display: block;
+            margin-top: 20px;
         }
-    </style>
-    <!-- Tailwind CSS y Font Awesome -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .sidebar a:hover { background-color: #f3eeed; }
-        .sidebar a.active { background-color: #3B82F6; }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #888;
+        }
+
+        .social-icons i {
+            margin: 0 5px;
+        }
     </style>
 </head>
-<body class="flex h-screen bg-gray-100">
+<body>
+<!-- Sidebar -->
+<aside class="sidebar">
+    <div class="logo">
+        <img src="CSS/images/logo.jpg" alt="Logo Patitas" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">🐾 Inicio</a></li>
+            <li><a href="adopciones.html">🐕 Adopciones</a></li>
+            <li><a href="eventos.html">🗓️ Eventos</a></li>
+            <li><a href="Donaciones.html">💰 Donaciones</a></li>
+            <li><a href="reportes.html">📄 Reportes</a></li>
+            <li><a href="usuarios.html">👨‍👩‍👧‍👦 Usuarios</a></li>
+        </ul>
+    </nav>
+    <div class="bottom-options">
+        <ul>
+            <li><a href="ajustes.html">⚙️ Ajustes</a></li>
+            <li onclick="cerrarSesion()" style="cursor:pointer;">🚪 Cerrar sesión</li>
+        </ul>
+    </div>
+</aside>
 
-    <!-- Contenedor principal -->
-    <main class="flex-1 ml-64 p-8 overflow-y-auto">
-        <h1>Ajustes</h1>
+<!-- Contenido principal -->
+<main>
+    <h2>Ajustes 🐾</h2>
 
-        <!-- Botones de navegación de ajustes -->
-        <div class="botones-ajustes">
-            <button class="boton-ajuste">Personal Info</button>
-            <button class="boton-ajuste">Contraseña y Seguridad</button>
-            <button class="boton-ajuste">Notificación</button>
-            <button class="boton-ajuste">Elige un plan</button>
+    <div class="botones-ajustes">
+        <button class="boton-ajuste">Personal Info</button>
+        <button class="boton-ajuste">Contraseña y Seguridad</button>
+        <button class="boton-ajuste">Notificación</button>
+        <button class="boton-ajuste">Elige un plan</button>
+    </div>
+
+    <!-- Formulario -->
+    <form>
+        <div class="campo">
+            <span class="etiqueta">Nombre</span>
+            <input type="text" value="Nicola" />
+            <span class="etiqueta">Apellido</span>
+            <input type="text" value="Rich" />
         </div>
 
-        <!-- Formulario de ajustes -->
-        <form>
-            <div class="campo">
-                <span class="etiqueta">Nombre</span>
-                <input type="text" value="Nicola">
-                <span class="etiqueta">Apellido</span>
-                <input type="text" value="Rich">
-            </div>
+        <div class="campo" style="grid-template-columns: 1fr;">
+            <span class="etiqueta">Email</span>
+            <input type="email" value="email@gmail.com" />
+        </div>
 
-            <div class="campo">
-                <span class="etiqueta">Email</span>
-                <input type="email" value="email@gmail.com" style="grid-column: span 2;">
-            </div>
+        <div class="campo" style="grid-template-columns: 1fr;">
+            <span class="etiqueta">Teléfono</span>
+            <input type="tel" value="+000 111 222 333" />
+        </div>
 
-            <div class="campo">
-                <span class="etiqueta">Teléfono</span>
-                <input type="tel" value="+000 111 222 333" style="grid-column: span 2;">
-            </div>
+        <div class="campo" style="grid-template-columns: 1fr;">
+            <span class="etiqueta">Dirección</span>
+            <input type="text" value="Sesame Street 000" />
+        </div>
 
-            <div class="campo">
-                <span class="etiqueta">Dirección</span>
-                <input type="text" value="Sesame Street 000" style="grid-column: span 2;">
-            </div>
+        <div class="campo">
+            <span class="etiqueta">Código Postal</span>
+            <input type="text" value="1234" />
+            <span class="etiqueta">Ciudad</span>
+            <input type="text" value="NYC" />
+        </div>
 
-            <div class="campo">
-                <span class="etiqueta">Código postal</span>
-                <input type="text" value="1234">
-                <span class="etiqueta">Ciudad</span>
-                <input type="text" value="NYC">
-            </div>
+        <div class="campo">
+            <span class="etiqueta">Estado</span>
+            <input type="text" value="New York" />
+            <span class="etiqueta">País</span>
+            <select>
+                <option>United States</option>
+                <option>México</option>
+                <option>Colombia</option>
+            </select>
+        </div>
 
-            <div class="campo">
-                <span class="etiqueta">Estado</span>
-                <input type="text" value="New York">
-                <span class="etiqueta">País</span>
-                <select>
-                    <option>United States</option>
-                    <option>México</option>
-                    <option>Colombia</option>
-                </select>
-            </div>
+        <button type="submit">Guardar Cambios</button>
+    </form>
 
-            <button type="submit">Guardar Cambios</button>
-        </form>
-    </main>
-    <aside class="sidebar w-64 bg-[#fdf6ec] text-gray-800 fixed h-full overflow-y-auto">
-        <nav class="p-4">
-          <ul class="space-y-2">
-            <li><a href="index.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐾</span> Inicio</a></li>
-            <li><a href="adopciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐕</span> Adopciones</a></li>
-            <li><a href="eventos.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🗓️</span> Eventos</a></li>
-            <li><a href="Donaciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">💰</span> Donaciones</a></li>
-            <li><a href="reportes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">📄</span> Reportes</a></li>
-            <li><a href="usuarios.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">👨‍👩‍👧‍👦</span> Usuarios</a></li>
-      
-            <!-- Espacio para ajustes y cerrar sesión -->
-            <div class="absolute bottom-0 w-full left-0 p-4">
-              <li><a href="ajustes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">⚙️</span> Ajustes</a></li>
-              <li onclick="cerrarSesion()" class="btn block p-3 rounded-lg flex items-center cursor-pointer hover:bg-gray-700"><span class="mr-2">🚪</span> Cerrar sesión</li>
-            </div>
-          </ul>
-        </nav>
-    </aside>
-      
-    <script>
-        function cerrarSesion() {
-            window.location.href = "index.html";
-        }
+    <footer>
+        <p>Patitas en el Corazón</p>
+        <div class="footer-links">
+            <a href="#">Acerca</a>
+            <a href="#">Autores</a>
+            <a href="#">Archivo</a>
+            <a href="#">Términos</a>
+            <a href="#">Cookies</a>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+</main>
 
-        // Carga el menú en todas las páginas
-        fetch('sidebar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('sidebar').innerHTML = html;
-                adjustMainContent(); // Ajusta el margen del contenido
-            });
-
-        function adjustMainContent() {
-            const sidebarWidth = document.querySelector('.sidebar').offsetWidth;
-            document.querySelector('.main-content').style.marginLeft = `${sidebarWidth}px`;
-        }
-    </script> 
-    <script>
-        function cerrarSesion() {
-          window.location.href = "index.html";
-        }
-    </script>     
+<script>
+    function cerrarSesion() {
+        window.location.href = "index.html";
+    }
+</script>
 </body>
 </html>
