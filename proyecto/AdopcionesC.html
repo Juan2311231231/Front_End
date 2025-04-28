@@ -42,7 +42,7 @@
     <!-- Encabezado -->
     <header>
         <div class="logo">
-            <img src="CSS/images/logo.jpg" alt=Adopciones">
+            <img src="CSS/images/logo.jpg" alt="Adopciones">
         </div>
         <h2>Adopciones 🐾</h2>
         <div class="perfil">
@@ -52,36 +52,153 @@
     </header>
 
     <!-- Sección Principal -->
+    <section class="text-center my-12">
+        <div class="flex justify-center items-center gap-6 py-8">
+            <a href="adopciones.html" class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition duration-300">
+                🐶 Perros
+            </a>
+            <span class="text-2xl font-bold">y</span>
+            <a href="AdopcionesC.html" class="text-2xl font-bold text-pink-600 hover:text-pink-800 transition duration-300">
+                🐱 Gatos
+            </a>
+            <!-- Imagen de gatito -->
 
-        <div style="display: flex; justify-content: center;">
-            <h1><a href="Adopciones.html"class="btn"><li>Perros</li> y 😺Gatos</h1>
         </div>
-        <h1>Dales Una Oportunidad</h1>
-        <h3>Adoptar un gato: un acto de amor y responsabilidad</h3>
-        <p>
-            Dar un hogar a un gato adoptado significa brindarle una nueva oportunidad de ser feliz. Muchos gatos en refugios esperan una familia que les ofrezca cariño y cuidado. Adoptar no solo les salva la vida, sino que también llena el hogar de compañía, diversión y momentos de ternura. Los gatos son independientes, pero también crean lazos profundos con sus dueños. Al adoptar, ayudas a reducir el abandono y das un paso hacia un mundo con menos animales en situación de calle.
-        </p>
-        
+    <h1 class="text-4xl font-bold text-center mb-4 ">Dales Una Oportunidad</h1>
+    <h3 class="text-2xl text-center mb-8 text-gray-700">Adoptar un gato: ternura y compañía inigualables</h3>
+    <p class="text-center mb-12 text-gray-600">
+        Adoptar un gato no solo transforma su vida, sino también la tuya. Estos pequeños compañeros ofrecen amor,
+        independencia y momentos de juego inigualables. Adoptar reduce la cantidad de gatos en situación de calle
+        y da una nueva oportunidad a seres que solo buscan un hogar lleno de cariño. 🐾💕
+    </p>
+    </section>
+    <!-- Sección de Gatos en Adopción -->
+    <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-        <!-- Sección de Perros en Adopción -->
-        <div class="container">
-            <div class="card">
-                <h3>Nina</h3>
-                <p>Nina es una gata curiosa y juguetona con un pelaje suave y esponjoso de color gris con manchas blancas. Sus ojos verdes brillan con inteligencia y dulzura, siempre observando todo a su alrededor. Es cariñosa, pero también disfruta de su independencia, pasando horas explorando rincones o descansando en su lugar favorito. Aunque al principio puede ser un poco reservada, una vez que toma confianza, se convierte en una compañera leal que adora los mimos y las siestas al sol.</p>
-            </div>
-            <div class="card">
-                <h3>Mila</h3>
-                <p>Mila es una gatita de pelaje gris atigrado y ojos verdes brillantes que reflejan su espíritu curioso. Siempre está explorando cada rincón de la casa y trepando a los lugares más altos. Es juguetona y le encanta perseguir cintas y bolitas de papel. Aunque tiene un lado independiente, cuando quiere cariño se acurruca y ronronea suavemente. Su dulzura y energía la convierten en la compañera perfecta.</p>
-            </div>
-            <div class="card">
-                <h3>Milo</h3>
-                <p>Milo es un gato atigrado de color gris con rayas oscuras y una personalidad curiosa e inquieta. Siempre está explorando cada rincón de la casa y trepando a los lugares más altos. Es juguetón y travieso, pero también disfruta de largas siestas al sol. A pesar de su energía, le encanta recibir caricias y ronronear cuando está cómodo. Su espíritu aventurero y su ternura lo hacen irresistible.</p>
-            </div>
-            <div class="card">
-                <h3>Olivia</h3>
-                <p>Olivia es una gata de pelaje blanco con manchas negras, elegante y llena de personalidad. Le encanta observar todo desde lo alto y tiene un aire de independencia, aunque en el fondo es muy cariñosa. Disfruta las siestas en lugares cálidos y siempre busca la manera de llamar la atención con su suave maullido. Con Olivia en casa, nunca faltan momentos de ternura y diversión.</p>
+        <!-- Gatito 1 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Milo', 'Milo es un gatito juguetón de pelaje anaranjado. Le encanta trepar y dormir en lugares altos. Es curioso, cariñoso y muy sociable', 'https://placecats.com/louie/300/200')">
+            <img src="https://placecats.com/louie/300/200" alt="Milo" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-pink-600">Milo</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
             </div>
         </div>
+
+        <!-- Gatito 2 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Nina', 'Nina es una gatita elegante de pelaje gris. Tranquila, observadora y muy cariñosa. Ideal para hogares que buscan calma y ternura.', 'https://placecats.com/millie/300/150')">
+
+        <img src="https://placecats.com/millie/300/150" alt="Nina" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-yellow-600">Nina</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 3 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Leo', 'LLeo es un pequeño aventurero de ojos grandes y brillantes. Siempre busca jugar y explorar nuevos rincones. ¡Un compañero lleno de energía!', 'https://placecats.com/neo_banana/300/200')">
+
+        <img src="https://placecats.com/neo_banana/300/200" alt="Leo" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-green-700">Leo</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 4 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Mía', 'Mía es una gatita dulce de pelaje blanco. Le encanta acurrucarse en tu regazo y recibir mimos. Ideal para familias que buscan amor incondicional.', 'https://placecats.com/bella/300/200')">
+
+            <img src="https://placecats.com/bella/300/200" alt="Mía" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-blue-700">Mía</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+        <!-- Gatito 5 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Simba', 'Simba siempre está explorando y buscando nuevas aventuras. Perfecto para hogares dinámicos.', 'https://placecats.com/neo/300/200')">
+            <img src="https://placecats.com/neo/300/200" alt="Simba" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-pink-600">Simba</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 6 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Luna', 'Luna disfruta de largas siestas al sol y noches de contemplación en la ventana.', 'https://placecats.com/poppy/300/150')">
+            <img src="https://placecats.com/poppy/300/150" alt="Luna" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-yellow-600">Luna</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 7 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Max', 'Max te sacará sonrisas con sus travesuras y su energía interminable.', 'https://placecats.com/millie_neo/300/200')">
+            <img src="https://placecats.com/millie_neo/300/200" alt="Max" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-green-700">Max</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 8 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Nala', 'Nala buscará tu regazo apenas te sientes. Ideal para personas que adoran mimar a sus mascotas.', 'https://placecats.com/neo_banana/300/200')">
+            <img src="https://placecats.com/neo_banana/300/200" alt="Nala" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-purple-600">Nala</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 9 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Oliver', 'Oliver siempre investiga todo a su alrededor. Es muy inteligente y aprende rápido.', 'https://placecats.com/neo_2/300/200')">
+            <img src="https://placecats.com/neo_2/300/200" alt="Oliver" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-red-600">Oliver</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 10 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Cleo', 'Cleo ama jugar con cordones y pelotas. Siempre lista para una nueva aventura.', 'https://placecats.com/bella/300/200')">
+            <img src="https://placecats.com/bella/300/200" alt="Cleo" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-yellow-600">Cleo</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 11 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Chester', 'Chester es el compañero perfecto para las tardes frías. Le encanta dormir en lugares cálidos.', 'https://placecats.com/g/300/200')">
+            <img src="https://placecats.com/g/300/200" alt="Chester" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold text-gray-800">Chester</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+        <!-- Gatito 12 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Milo', 'Milo adora descubrir nuevos rincones de la casa y treparse a todas partes.', 'https://placecats.com/300/200')">
+            <img src="https://placecats.com/300/200" alt="Milo" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-yellow-600">Milo</h3>
+                <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full relative">
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+            <img id="modalImage" src="" alt="Foto del perrito" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+            <p id="modalDescription" class="text-gray-600 mb-4"></p>
+            <a href="formulario-adopcion.html" class="bg-[#E07B75] text-white font-semibold py-2 px-4 rounded hover:bg-[#d06a64]">
+                Adoptar
+            </a>
+        </div>
+    </div>
+
 
 
 
@@ -111,6 +228,18 @@
           window.location.href = "index.html"; // O "index.html", según el nombre real de tu pantalla de inicio
         }
     </script>
+<!-- Script para abrir/cerrar modal -->
+<script>
+    function openModal(name, description, image) {
+        document.getElementById('modalTitle').innerText = name;
+        document.getElementById('modalDescription').innerText = description;
+        document.getElementById('modalImage').src = image;
+        document.getElementById('modal').classList.remove('hidden');
+    }
 
+    function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+    }
+</script>
 </body>
 </html>

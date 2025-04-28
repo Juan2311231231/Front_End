@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Adopción</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/adopciones.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sidebar a:hover { background-color: #f3eeed; }
+        .sidebar a.active { background-color: #3B82F6; }
+        .btn-rosado {
+            background-color: #E07B75; /* Color del botón basado en tu imagen */
+        }
+        .btn-rosado:hover {
+            background-color: #d06a64; /* Un tono un poco más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body class="flex h-screen bg-gray-100">
+
+<aside class="sidebar w-64 bg-[#fdf6ec] text-gray-800 fixed h-full overflow-y-auto">
+    <nav class="p-4">
+        <ul class="space-y-2">
+            <li><a href="index.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐾</span> Inicio</a></li>
+            <li><a href="adopciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🐕</span> Adopciones</a></li>
+            <li><a href="eventos.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">🗓️</span> Eventos</a></li>
+            <li><a href="Donaciones.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">💰</span> Donaciones</a></li>
+            <li><a href="reportes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">📄</span> Reportes</a></li>
+            <li><a href="usuarios.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">👨‍👩‍👧‍👦</span> Usuarios</a></li>
+
+            <!-- Espacio para ajustes y cerrar sesión (alineado al final) -->
+            <div class="absolute bottom-0 w-full left-0 p-4">
+                <li><a href="ajustes.html" class="btn block p-3 rounded-lg flex items-center"><span class="mr-2">⚙️</span> Ajustes</a></li>
+                <li onclick="cerrarSesion()" class="btn block p-3 rounded-lg flex items-center cursor-pointer hover:bg-gray-700"><span class="mr-2">🚪</span> Cerrar sesión</li>
+            </div>
+        </ul>
+    </nav>
+</aside>
+<!-- Contenido principal -->
+<main class="flex-1 ml-64 p-8 overflow-y-auto" id="content">
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="CSS/images/logo.jpg" alt="Adopciones">
+        </div>
+        <h2>Formulario Adopaciones🐾</h2>
+        <div class="perfil">
+            <span>Nicola Rich</span>
+            <img src="CSS/images/perfil.png" alt="Perfil">
+        </div>
+    </header>
+
+    <form action="#" method="POST" class="space-y-6">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">Nombre completo</label>
+                <input type="text" name="nombre" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">Documento de identidad</label>
+                <input type="text" name="documento" required placeholder="Ej: 12345678" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">Edad</label>
+                <input type="number" name="edad" required min="18" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">Teléfono</label>
+                <input type="tel" name="telefono" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-gray-700 font-semibold mb-1">Correo electrónico</label>
+            <input type="email" name="correo" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+        </div>
+
+        <div>
+            <label class="block text-gray-700 font-semibold mb-1">Dirección completa</label>
+            <input type="text" name="direccion" required placeholder="Calle, número, barrio, ciudad" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">¿Tiene otras mascotas?</label>
+                <select name="otras_mascotas" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+                    <option value="">Seleccione</option>
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">¿Tiene espacio adecuado (patio)?</label>
+                <select name="espacio" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+                    <option value="">Seleccione</option>
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-gray-700 font-semibold mb-1">Nombre del mascota que desea adoptar</label>
+            <input type="text" name="perro" required placeholder="Ej: Pepo, Luna, Coco" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+        </div>
+
+        <div>
+            <label class="block text-gray-700 font-semibold mb-1">Compromiso de adopción</label>
+            <textarea name="compromiso" required rows="4" placeholder="Explica brevemente tu compromiso con el cuidado y bienestar del perrito." class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-500"></textarea>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn-rosado text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                Enviar Solicitud
+            </button>
+        </div>
+
+    </form>
+
+    <div class="mt-6 text-center">
+        <a href="index.html" class="text-blue-500 hover:underline">← Volver al inicio</a>
+    </div>
+    <!-- Pie de Página -->
+    <footer>
+        <p>Patitas en el Corazón</p>
+        <div class="footer-links">
+            <a href="#">Acerca</a>
+            <a href="#">Autores</a>
+            <a href="#">Archivo</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de cookies</a>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+</main>
+
+</body>
+</html>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adopciones - Patitas en el Corazón</title>
@@ -49,41 +48,132 @@
     </header>
 
 
-    <!-- Sección Principal -->
-        <div style="display: flex; justify-content: center;">
-            <h1>🐶Perros y  <a href="AdopcionesC.html"class="btn"><li>Gatos</li></a></h1>>
+    <!-- Sección principal -->
+    <section class="text-center my-12">
+        <div class="flex justify-center items-center gap-6 py-8">
+            <a href="adopciones.html" class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition duration-300">
+                🐶 Perros
+            </a>
+            <span class="text-2xl font-bold">y</span>
+            <a href="AdopcionesC.html" class="text-2xl font-bold text-pink-600 hover:text-pink-800 transition duration-300">
+                🐱 Gatos
+            </a>
         </div>
-        <h1>Dales Una Oportunidad</h1>
-        <h3>Adoptar un perro: un acto de amor y responsabilidad</h3>
-        <p>
-            Adoptar un perro no solo cambia la vida del animal, sino también la de su nueva familia. 
-            Es darle una segunda oportunidad a un ser que busca amor y protección. Los perros adoptados 
-            suelen ser increíblemente leales y agradecidos, formando un vínculo especial con sus dueños. 
-            Además, adoptar contribuye a reducir el número de animales en situación de calle y en refugios. 
-            Es una decisión llena de responsabilidad, pero también de grandes recompensas: compañía 
+
+        <h1 class="text-4xl font-bold mb-4">Dales Una Oportunidad</h1>
+        <h3 class="text-2xl font-semibold mb-6 text-gray-600">Adoptar un perro: un acto de amor y responsabilidad</h3>
+        <p class="max-w-2xl mx-auto text-gray-700 mb-12">
+            Adoptar un perro no solo cambia la vida del animal, sino también la de su nueva familia.
+            Es darle una segunda oportunidad a un ser que busca amor y protección. Los perros adoptados
+            suelen ser increíblemente leales y agradecidos, formando un vínculo especial con sus dueños.
+            Además, adoptar contribuye a reducir el número de animales en situación de calle y en refugios.
+            Es una decisión llena de responsabilidad, pero también de grandes recompensas: compañía
             incondicional, alegría diaria y la satisfacción de haber cambiado una vida. 💕🐾
         </p>
-        
+    </section>
 
-        <!-- Sección de Perros en Adopción -->
-        <div class="container">
-            <div class="card">
-                <h3>Pepo</h3>
-                <p>Pepo es un perro de tamaño mediano, con un pelaje esponjoso y de color marrón claro. Tiene orejas grandes y puntiagudas que siempre están atentas a los sonidos a su alrededor. Sus ojos son oscuros y brillantes, reflejando su curiosidad y cariño. Su cola es larga y se mueve sin parar cuando está feliz. Le encanta correr, jugar con su pelota y dormir acurrucado después de un día lleno de aventuras.</p>
-            </div>
-            <div class="card">
-                <h3>Luna</h3>
-                <p>Luna es una perrita pequeña, de pelaje blanco con manchas negras. Sus orejas son caídas y suaves, y sus ojos grandes y expresivos siempre reflejan ternura. Es muy juguetona y le encanta correr detrás de las mariposas en el jardín. Aunque es muy enérgica, también disfruta de las siestas en su cama favorita. Siempre busca caricias y compañía, siendo la mejor amiga de quienes la rodean.</p>
-            </div>
-            <div class="card">
-                <h3>Coco</h3>
-                <p>Coco es un perrito mediano, de color dorado y con una cola esponjosa que nunca deja de moverse. Es muy curioso y siempre está explorando todo a su alrededor. Adora jugar con sus juguetes y hacer travesuras, pero también es muy tierno cuando se acurruca para dormir. Su energía y alegría contagian a todos los que lo rodean.</p>
-            </div>
-            <div class="card">
-                <h3>Peter</h3>
-                <p>Peter es un perro grande y fuerte, de pelaje negro y marrón. Tiene orejas erguidas y una mirada atenta que demuestra su inteligencia. Siempre está alerta para proteger a su familia, pero en el fondo es un perro cariñoso que disfruta de los juegos y las caricias. Le encanta correr en espacios abiertos y es muy leal con quienes confían en él.</p>
-            </div>
+    <!-- Cards de perros -->
+    <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+        <!-- Pepo -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Pepo', 'Pepo es un perro muy leal, juguetón y amoroso.', 'https://placedog.net/400?id=1')">
+            <img src="https://placedog.net/400?id=1" alt="Pepo" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-blue-700">Pepo</h3>
+            <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
         </div>
+
+        <!-- Luna -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Luna', 'Luna es una pequeña traviesa y súper cariñosa.', 'https://placedog.net/400?id=2')">
+            <img src="https://placedog.net/400?id=2" alt="Luna" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-pink-600">Luna</h3>
+            <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+        </div>
+
+        <!-- Coco -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Coco', 'Coco es curioso, travieso y muy divertido.', 'https://placedog.net/400?id=3')">
+            <img src="https://placedog.net/400?id=3" alt="Coco" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-yellow-600">Coco</h3>
+            <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+        </div>
+
+        <!-- Peter -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Peter', 'Peter es fuerte, leal y muy cariñoso.', 'https://placedog.net/400?id=4')">
+            <img src="https://placedog.net/400?id=4" alt="Peter" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-green-700">Peter</h3>
+            <p class="text-gray-600 text-sm">Haz clic para conocer más.</p>
+        </div>
+
+        <!-- Pepo -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Pepo', 'Pepo es un criollo juguetón y protector, siempre atento y lleno de energía.', 'https://placedog.net/400?id=10')">
+            <img src="https://placedog.net/400?id=10" alt="Pepo" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-blue-700">Pepo</h3>
+            <p class="text-gray-600 text-sm">Haz clic para saber más.</p>
+        </div>
+
+        <!-- Luna -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Luna', 'Luna es una criolla amorosa que adora los paseos y las caricias.', 'https://placedog.net/400?id=11')">
+            <img src="https://placedog.net/400?id=11" alt="Luna" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-pink-600">Luna</h3>
+            <p class="text-gray-600 text-sm">Haz clic para saber más.</p>
+        </div>
+
+        <!-- Coco -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Coco', 'Coco es muy sociable, le encanta correr y hacer nuevos amigos.', 'https://placedog.net/400?id=12')">
+            <img src="https://placedog.net/400?id=12" alt="Coco" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-yellow-600">Coco</h3>
+            <p class="text-gray-600 text-sm">Haz clic para saber más.</p>
+        </div>
+
+        <!-- Peter -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Peter', 'Peter es grande y tierno, ideal para familias activas.', 'https://placedog.net/400?id=13')">
+            <img src="https://placedog.net/400?id=13" alt="Peter" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-green-700">Peter</h3>
+            <p class="text-gray-600 text-sm">Haz clic para saber más.</p>
+        </div>
+
+        <!-- Maya -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Maya', 'Maya es una criolla dulce, ideal para hogares tranquilos.', 'https://placedog.net/400?id=14')">
+            <img src="https://placedog.net/400?id=14" alt="Maya" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-purple-600">Maya</h3>
+            <p class="text-gray-600 text-sm">Haz clic para saber más.</p>
+        </div>
+
+        <!-- Max -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer" onclick="openModal('Max', 'Max es un cachorro activo que adora jugar al aire libre.', 'https://placedog.net/400?id=15')">
+            <img src="https://placedog.net/400?id=15" alt="Max" class="w-full h-48 object-cover rounded-t-lg mb-4">
+            <h3 class="text-xl font-bold mb-2 text-red-600">Max</h3>
+            <p class="text-gray-600 text-sm">Haz clic para saber más.</p>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full relative">
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+            <img id="modalImage" src="" alt="Foto del perrito" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+            <p id="modalDescription" class="text-gray-600 mb-4"></p>
+            <a href="formulario-adopcion.html" class="bg-[#E07B75] text-white font-semibold py-2 px-4 rounded hover:bg-[#d06a64]">
+                Adoptar
+            </a>
+        </div>
+    </div>
+
+    <!-- Script para abrir/cerrar modal -->
+    <script>
+        function openModal(name, description, image) {
+            document.getElementById('modalTitle').innerText = name;
+            document.getElementById('modalDescription').innerText = description;
+            document.getElementById('modalImage').src = image;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+
 
 
     <!-- Pie de Página -->
@@ -112,6 +202,18 @@
           window.location.href = "index.html"; // O "index.html", según el nombre real de tu pantalla de inicio
         }
     </script>
+<!-- Script para abrir/cerrar modal -->
+<script>
+    function openModal(name, description, image) {
+        document.getElementById('modalTitle').innerText = name;
+        document.getElementById('modalDescription').innerText = description;
+        document.getElementById('modalImage').src = image;
+        document.getElementById('modal').classList.remove('hidden');
+    }
 
+    function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+    }
+</script>
 </body>
 </html>
